@@ -6,105 +6,69 @@
 <title>Welcome Day 2026 - Game Registration</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:linear-gradient(135deg,#eef7ff,#fff);
-  color:#14213d;
-  min-height:100vh;
-}
-.hero{
-  position:relative;
-  min-height:330px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
-  background:#06245d;
-}
-.hero img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:.30;
-}
-.hero-content{position:relative;z-index:2;padding:35px 18px;color:white}
-.hero h1{font-size:clamp(34px,7vw,68px);font-weight:900;letter-spacing:1px}
-.hero h2{font-size:clamp(18px,3vw,30px);margin-top:8px;color:#ffd21c}
-.hero p{margin-top:14px;font-size:16px}
-.container{max-width:1100px;margin:auto;padding:28px 16px 50px}
-.notice{
-  background:white;border-radius:18px;padding:20px;
-  box-shadow:0 8px 30px rgba(0,0,0,.08);
-  text-align:center;margin-bottom:24px;
-}
-.notice strong{color:#e53935}
-.grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px
-}
-.card{
-  background:white;border-radius:20px;padding:20px;
-  box-shadow:0 7px 24px rgba(0,0,0,.09);
-  border:1px solid #e8edf5;
-  display:flex;flex-direction:column;min-height:205px;
-  transition:.2s;
-}
-.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.13)}
-.num{
-  width:48px;height:48px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  background:#0b4dbb;color:#fff;font-weight:900;font-size:20px;
-  margin-bottom:12px;
-}
-.card h3{font-size:21px;margin-bottom:8px}
-.time{color:#555;font-size:14px;margin-bottom:15px}
-.btn{
-  margin-top:auto;text-decoration:none;text-align:center;
-  background:#0b4dbb;color:#fff;padding:12px 15px;
-  border-radius:12px;font-weight:800;
-}
-.btn:hover{background:#073b91}
-.footer{text-align:center;padding:25px;color:#667085;font-size:13px}
-@media(max-width:500px){.hero{min-height:270px}.card{min-height:185px}}
+:root{--blue:#06245d;--deep:#071d55;--red:#ef2029;--yellow:#ffd21c;--cyan:#0dbbd7;--ink:#09275f}
+body{font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#eef8ff 0%,#f8fcff 55%,#eaf6ff 100%);color:var(--ink);min-height:100vh;overflow-x:hidden}
+.hero{position:relative;min-height:475px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--deep);isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.38;z-index:-3}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,31,92,.72),rgba(0,55,135,.66));z-index:-2}
+.hero:before{content:"";position:absolute;width:120%;height:170px;left:-10%;bottom:-105px;background:#fff;border-radius:50% 50% 0 0/70% 70% 0 0;z-index:1}
+.hero-content{position:relative;z-index:3;width:min(1180px,94%);padding:28px 15px 80px}
+.college-name{font-size:clamp(28px,5vw,62px);font-weight:1000;line-height:1.02;letter-spacing:.5px;color:var(--red);text-transform:uppercase;text-shadow:none;margin-bottom:18px}
+.department-name{display:inline-block;background:#16a085;color:#fff;font-size:clamp(21px,3.2vw,38px);font-weight:1000;line-height:1.05;text-transform:uppercase;padding:13px 38px;border-radius:55px;box-shadow:0 8px 0 rgba(0,0,0,.14);position:relative;margin-bottom:24px}
+.department-name:before,.department-name:after{content:"⚙";font-size:.75em;margin:0 14px;color:var(--blue)}
+.hero h1{font-size:clamp(50px,8vw,92px);font-weight:1000;line-height:.95;letter-spacing:1px;color:#fff;text-shadow:0 5px 0 rgba(8,40,105,.9),0 8px 20px rgba(0,0,0,.28)}
+.hero h2{display:inline-block;margin-top:18px;background:var(--yellow);color:var(--ink);padding:10px 30px;border-radius:50px;font-size:clamp(19px,3vw,31px);font-weight:1000}
+.hero p.sub{margin-top:15px;color:#fff;font-size:clamp(15px,2vw,21px);font-weight:800}
+.splash{position:absolute;z-index:2;pointer-events:none;font-size:60px;font-weight:900}
+.s1{left:3%;top:35%;color:#ff238b;transform:rotate(-25deg)}.s2{right:4%;top:38%;color:#ff9d00;transform:rotate(25deg)}
+.s3{left:7%;bottom:21%;color:#11d5f2;transform:rotate(15deg)}.s4{right:8%;bottom:20%;color:#ff2b63;transform:rotate(-18deg)}
+.container{max-width:1250px;margin:-25px auto 0;position:relative;z-index:4;padding:0 18px 45px}
+.notice{background:rgba(255,255,255,.96);border:1px solid #dcecff;border-radius:25px;padding:25px 20px;text-align:center;margin-bottom:24px;box-shadow:0 10px 35px rgba(20,80,150,.12)}
+.notice h2{font-size:clamp(25px,4vw,38px);font-weight:1000}.notice p{margin-top:9px;font-size:16px}.notice strong{color:var(--red);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;background:rgba(255,255,255,.97);border-radius:22px;padding:20px 20px 18px;min-height:175px;box-shadow:0 8px 26px rgba(20,80,150,.12);border:1px solid #dcecff;overflow:hidden;transition:.25s}
+.card:after{content:"✦";position:absolute;right:16px;top:12px;font-size:30px;color:var(--accent,#0b76e8);transform:rotate(18deg)}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 35px rgba(20,80,150,.18)}
+.num{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--accent,#0b76e8);color:#fff;font-weight:1000;font-size:24px;margin-bottom:10px;box-shadow:0 5px 0 rgba(0,0,0,.08)}
+.card h3{font-size:22px;margin-bottom:7px;color:var(--ink)}.time{color:#124a9b;font-size:15px;font-weight:700;margin-bottom:14px}.btn{display:block;text-decoration:none;text-align:center;background:#0869e8;color:#fff;padding:12px 15px;border-radius:14px;font-weight:1000;letter-spacing:.2px;transition:.2s}.btn:hover{background:#034db3;transform:scale(1.02)}
+.card:nth-child(1){--accent:#168be5}.card:nth-child(2){--accent:#f02aa2}.card:nth-child(3){--accent:#2fb94b}.card:nth-child(4){--accent:#ff8500}.card:nth-child(5){--accent:#8e32df}.card:nth-child(6){--accent:#12a9ba}.card:nth-child(7){--accent:#f12643}.card:nth-child(8){--accent:#ffb51b}.card:nth-child(9){--accent:#9b42df}
+.footer{text-align:center;padding:22px;color:#143b7a;font-size:14px;font-weight:700;position:relative}.footer:before,.footer:after{content:"";display:inline-block;width:80px;height:2px;background:#143b7a;vertical-align:middle;margin:0 20px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.hero{min-height:440px}.department-name{padding:12px 20px}}
+@media(max-width:560px){.hero{min-height:500px}.college-name{font-size:clamp(27px,8vw,40px)}.department-name{font-size:21px;border-radius:20px}.department-name:before,.department-name:after{display:none}.hero h1{font-size:55px}.hero h2{font-size:17px;padding:9px 15px}.grid{grid-template-columns:1fr}.container{padding:0 12px 35px}.card{min-height:160px}.splash{font-size:38px}}
 </style>
 </head>
 <body>
-
 <section class="hero">
   <img src="welcome-day-poster.jpg" alt="Welcome Day 2026">
+  <span class="splash s1">✦</span><span class="splash s2">✦</span><span class="splash s3">✦</span><span class="splash s4">✦</span>
   <div class="hero-content">
+    <div class="college-name">RAJEEV GANDHI MEMORIAL COLLEGE OF ENGINEERING AND TECHNOLOGY</div>
+    <div class="department-name">MECHANICAL ENGINEERING DEPARTMENT</div>
     <h1>WELCOME DAY</h1>
     <h2>GAME REGISTRATION • FRESHERS 2026</h2>
-    <p>Rajeev Gandhi Memorial College of Engineering and Technology</p>
+    <p class="sub">Welcome to an exciting day of games, fun and new beginnings!</p>
   </div>
 </section>
 
 <main class="container">
   <div class="notice">
     <h2>🎮 Choose Your Game</h2>
-    <p style="margin-top:8px">
-      Select a game below to open its registration form.
-      <br><strong>Register separately for each game you want to participate in.</strong>
-    </p>
+    <p>Select a game below to open its registration form.</p>
+    <p><strong>Register separately for each game you want to participate in.</strong></p>
   </div>
 
   <div class="grid">
-    <div class="card"><div class="num">01</div><h3>Icebreaker</h3><div class="time">10:00 AM – 11:00 AM</div><a class="btn" href="https://forms.gle/ciKKJD2NkLuGpwMMA" target="_blank">REGISTER NOW</a></div>
-    <div class="card"><div class="num">02</div><h3>Flower Race</h3><div class="time">11:00 AM – 11:30 AM</div><a class="btn" href="https://forms.gle/Wv3yLZQz3TYM9UMW9" target="_blank">REGISTER NOW</a></div>
-    <div class="card"><div class="num">03</div><h3>Balance Bamboo Race</h3><div class="time">11:30 AM – 12:00 PM</div><a class="btn" href="https://forms.gle/KP5xpZUVFv4Vifny7" target="_blank">REGISTER NOW</a></div>
-    <div class="card"><div class="num">04</div><h3>Leave & Catch</h3><div class="time">12:00 PM – 12:30 PM</div><a class="btn" href="https://forms.gle/VoeRfRFwNqQGWK2v6" target="_blank">REGISTER NOW</a></div>
-    <div class="card"><div class="num">05</div><h3>In & Out</h3><div class="time">1:30 PM – 2:00 PM</div><a class="btn" href="https://forms.gle/s4xKVdaYxwzZ328s6" target="_blank">REGISTER NOW</a></div>
-    <div class="card"><div class="num">06</div><h3>Tug of War</h3><div class="time">2:00 PM – 2:30 PM</div><a class="btn" href="https://forms.gle/5wT9WiwE2qPy3SWBA" target="_blank">REGISTER NOW</a></div>
-    <div class="card"><div class="num">07</div><h3>Ring Toss</h3><div class="time">2:30 PM – 3:00 PM</div><a class="btn" href="https://forms.gle/6iwrCWJX1Fejj9Tz8" target="_blank">REGISTER NOW</a></div>
-    <div class="card"><div class="num">08</div><h3>Fill Me</h3><div class="time">3:00 PM – 3:30 PM</div><a class="btn" href="https://forms.gle/nV8mJqnnkeEfeNij7" target="_blank">REGISTER NOW</a></div>
-    <div class="card"><div class="num">09</div><h3>Dance & Singing</h3><div class="time">3:30 PM – 4:20 PM</div><a class="btn" href="https://forms.gle/wNpAqpfeF1BV6cQs8" target="_blank">REGISTER NOW</a></div>
+    <div class="card"><div class="num">01</div><h3>Icebreaker</h3><div class="time">◷ 10:00 AM – 11:00 AM</div><a class="btn" href="https://forms.gle/ciKKJD2NkLuGpwMMA" target="_blank">REGISTER NOW</a></div>
+    <div class="card"><div class="num">02</div><h3>Flower Race</h3><div class="time">◷ 11:00 AM – 11:30 AM</div><a class="btn" href="https://forms.gle/Wv3yLZQz3TYM9UMW9" target="_blank">REGISTER NOW</a></div>
+    <div class="card"><div class="num">03</div><h3>Balance Bamboo Race</h3><div class="time">◷ 11:30 AM – 12:00 PM</div><a class="btn" href="https://forms.gle/KP5xpZUVFv4Vifny7" target="_blank">REGISTER NOW</a></div>
+    <div class="card"><div class="num">04</div><h3>Leave &amp; Catch</h3><div class="time">◷ 12:00 PM – 12:30 PM</div><a class="btn" href="https://forms.gle/VoeRfRFwNqQGWK2v6" target="_blank">REGISTER NOW</a></div>
+    <div class="card"><div class="num">05</div><h3>In &amp; Out</h3><div class="time">◷ 1:30 PM – 2:00 PM</div><a class="btn" href="https://forms.gle/s4xKVdaYxwzZ328s6" target="_blank">REGISTER NOW</a></div>
+    <div class="card"><div class="num">06</div><h3>Tug of War</h3><div class="time">◷ 2:00 PM – 2:30 PM</div><a class="btn" href="https://forms.gle/5wT9WiwE2qPy3SWBA" target="_blank">REGISTER NOW</a></div>
+    <div class="card"><div class="num">07</div><h3>Ring Toss</h3><div class="time">◷ 2:30 PM – 3:00 PM</div><a class="btn" href="https://forms.gle/6iwrCWJX1Fejj9Tz8" target="_blank">REGISTER NOW</a></div>
+    <div class="card"><div class="num">08</div><h3>Fill Me</h3><div class="time">◷ 3:00 PM – 3:30 PM</div><a class="btn" href="https://forms.gle/nV8mJqnnkeEfeNij7" target="_blank">REGISTER NOW</a></div>
+    <div class="card"><div class="num">09</div><h3>Dance &amp; Singing</h3><div class="time">◷ 3:30 PM – 4:20 PM</div><a class="btn" href="https://forms.gle/wNpAqpfeF1BV6cQs8" target="_blank">REGISTER NOW</a></div>
   </div>
 </main>
-
-<div class="footer">
-  © 2026 Welcome Day • RGMCET
-</div>
+<div class="footer">© 2026 Welcome Day • RGMCET</div>
 </body>
 </html>
